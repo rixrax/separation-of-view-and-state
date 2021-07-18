@@ -3,3 +3,10 @@
 
 # Vagrant
 .vagrant/
+
+# Backend
+/backend/coverage/
+/backend/vendor/
+/backend/logs/*
+!/backend/logs/README.md
+.phpunit.result.cache
