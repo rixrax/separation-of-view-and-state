@@ -1,0 +1,31 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+    - name: "Install utilities"
+      apt:
+        package:
+          - zip
+          - unzip
+          - git
+
+    - name: "Add repository for PHP 7.4."
+      apt_repository:
+        repo: "ppa:ondrej/php"
+        update_cache: yes
+
+    - name: "Install PHP"
+      apt:
+        package:
+          - php7.4
+          - php7.4-common
+          - php7.4-zip
+          - php7.4-mbstring
+
+    - name: "Install node"
+      snap:
+        name: node
+        classic: yes
+        channel: "14"
+        state: present
