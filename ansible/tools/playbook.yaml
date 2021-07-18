@@ -22,6 +22,7 @@
           - php7.4-common
           - php7.4-zip
           - php7.4-mbstring
+          - php7.4-dom
 
     - name: "Install node"
       snap:
